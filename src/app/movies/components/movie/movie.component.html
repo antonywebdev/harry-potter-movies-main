@@ -1,0 +1,13 @@
+<div class="movie-card">
+  <div class="card-content-wrapper">
+    <h5 class="movie-card-content-title">{{ movie?.title }}</h5>
+    <button class="detail-navigate-button" (click)="navigateToDetails(movie?.id)">Details</button>
+  </div>
+  <div class="detail-block">
+    <span class="details">
+      Duration: {{ movie?.duration | duration }} |
+      Budget: {{ movie?.budget | budget }} |
+      Release Date: {{ movie?.release_date }}
+    </span>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<nav class="navbar title-section">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <h3 class="navbar-title">
+        Harry Potter Movies
+      </h3>
+    </div>
+  </div>
+</nav>
+
+<div class="movie-list-container">
+  <div class="filter-wrapper">
+    <div class="filter-block">
+      <div class="filter-title"><h5>Filters</h5></div>
+      <div class="filter-input-wrapper">
+        <div class="filter-input-block">
+          <span class="filter-input-type-text">Title</span>
+          <input type="text" [(ngModel)]="titleFilter" (input)="applyFilters()" class="form-control">
+        </div>
+        <div class="filter-input-block">
+          <span class="filter-input-type-text">Release Year</span>
+          <input type="text" [(ngModel)]="releaseYearFilter" (input)="applyFilters()" class="form-control">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="filter-data-area">
+    <ng-container *ngIf="loading" class="filter-container filter-container-loader">
+      <div class="loader-screen-wrapper">
+        <div class="spinner" role="status">
+          <span class="loader">Loading...</span>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!loading">
+      <ng-container *ngFor="let movie of filteredMovies">
+        <div class="data-listing-area">
+          <app-movie [movie]="movie"></app-movie>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>
