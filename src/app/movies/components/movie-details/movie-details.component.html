@@ -1,0 +1,56 @@
+<!-- movie-details.component.html -->
+<div class="details-container">
+  <div class="movie-detaiils-wrapper">
+    <div class="movie-detail-block">
+      <button class="btn btn-back" (click)="back()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" fill="#ffff" viewBox="0 0 103.19 98.08" id="house"><g data-name="Layer 2"><path d="M101.46 43.58 55.16 1.39a5.27 5.27 0 0 0-7.13 0L1.73 43.58a5.29 5.29 0 0 0 3.56 9.2h7.39V95a3 3 0 0 0 3 3H41.1a3 3 0 0 0 3-3V69.38h14.95V95a3 3 0 0 0 3 3h25.42a3 3 0 0 0 3-3V52.78h7.4a5.29 5.29 0 0 0 3.56-9.2zM89.71 6.06H69.33l23.41 21.29V9.09a3 3 0 0 0-3.03-3.03z" data-name="Layer 1"></path></g></svg>
+        Back
+      </button>
+    </div>
+    <div class="movie-title-area">
+      <h2 clsss="movie-title">{{ movie?.title }}</h2>
+    </div>
+  </div>
+
+  <div class="movie-details-wrapper">
+    <div class="movie-details-block">
+      <img class="img-poster" [src]="movie?.poster" alt="{{ movie?.title }} Poster" />
+    </div>
+    <div class="movie-details-block">
+      <p class="movie-summary">{{ movie?.summary }}</p>
+    </div>
+  </div>
+
+  <div class="movie-additional-details-wrapper">
+    <div class="movie-additional-details-block">
+      <h3 clsss="movie-additional-title">Details</h3>
+    </div>
+  </div>
+
+  <table class="table custom-table">
+    <tbody>
+      <tr>
+        <th scope="row">Box Office</th>
+        <td>{{ movie?.box_office | budget }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Budget</th>
+        <td>{{ movie?.budget | budget }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Duration</th>
+        <td>{{ movie?.duration | duration }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Producers</th>
+        <td>{{ movie?.producers?.join(', ') }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Cinematographers</th>
+        <td>{{ movie?.cinematographers?.join(', ') }}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+</div>

@@ -11,7 +11,7 @@ import { tap } from 'rxjs';
 })
 export class MovieBoardComponent implements OnInit {
   movies: Movie[] = [];
-  filteredMovies: Movie[] = []; // Nuovo array per i film filtrati
+  filteredMovies: Movie[] = [];
   titleFilter: string = '';
   releaseYearFilter: string = '';
   loading: boolean = true;
@@ -41,7 +41,6 @@ export class MovieBoardComponent implements OnInit {
   }
 
   applyFilters(): void {
-    // Filtra i film in base ai criteri
     this.filteredMovies = this.movies.filter((movie: Movie) =>
       movie?.title?.toLowerCase().includes(this.titleFilter.toLowerCase()) &&
       this.filterByYear(movie?.release_date)
@@ -50,7 +49,7 @@ export class MovieBoardComponent implements OnInit {
 
   filterByYear(releaseDate?: string): boolean {
     if (!this.releaseYearFilter || !releaseDate) {
-      return true; // Se l'anno di filtro è vuoto, restituisci true per mantenere il film nel risultato
+      return true; 
     }
 
     const yearFromReleaseDate = new Date(releaseDate).getFullYear().toString();

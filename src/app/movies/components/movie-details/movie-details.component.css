@@ -1,0 +1,23 @@
+.details-container {
+  max-width: 1120px;
+  margin: 20px auto;
+  background-color: #ECEFF4;
+  color: #000;
+  padding: 20px 30px;
+}
+.movie-details-wrapper {
+  display: flex;
+}
+table.table.custom-table {
+  overflow: initial;
+}
+
+table.table.custom-table th {
+  background-color: #E5E9F0;
+}
+table.table.custom-table tr td {
+  background-color: #ECEFF4;
+}
+table.table.custom-table th, table.table.custom-table td {
+  color: #000;
+}
