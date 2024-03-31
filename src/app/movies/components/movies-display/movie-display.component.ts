@@ -5,11 +5,11 @@ import { Router } from '@angular/router';
 import { tap } from 'rxjs';
 
 @Component({
-  selector: 'app-movie-board',
-  templateUrl: './movie-board.component.html',
-  styleUrls: ['./movie-board.component.css']
+  selector: 'app-movie-display',
+  templateUrl: './movie-display.component.html',
+  styleUrls: ['./movie-display.component.css']
 })
-export class MovieBoardComponent implements OnInit {
+export class MovieDisplayComponent implements OnInit {
   movies: Movie[] = [];
   filteredMovies: Movie[] = [];
   titleFilter: string = '';

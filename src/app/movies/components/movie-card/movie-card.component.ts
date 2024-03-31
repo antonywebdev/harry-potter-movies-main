@@ -4,10 +4,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie',
-  templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.css']
+  templateUrl: './movie-card.component.html',
+  styleUrls: ['./movie-card.component.css']
 })
-export class MovieComponent implements OnInit {
+export class MovieCardComponent implements OnInit {
 
   @Input("movie") movie: Movie | undefined;
 

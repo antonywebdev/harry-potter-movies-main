@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
-import { MovieBoardComponent } from './components/movie-board/movie-board.component';
+import { MovieDisplayComponent } from './components/movies-display/movie-display.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: MovieBoardComponent
+    component: MovieDisplayComponent
   },
   {
     path: 'movies',
